@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta charset = "UTF-8" /> 
+<title> Вычисление Мощности электрического тока  </title>
+<script type="text/javascript">
+function getResult() {
+ var i=document.getElementById("U").value;
+ var u=document.getElementById("I").value; 
+ document.getElementById("P").value = u*i;
+}
+</script>
+</head>
+<body>      
+<div align="center">
+<br><br>		
+Напряжение (U, Вольт): <br><br>
+<input name="login" type="text" size="35" maxlength="50" id="U"/> <br />
+<br><br>
+Сила тока (I, Ампер) <br><br>
+<input name="login" type="text" size="35" maxlength="50" id="I"/> <br />
+<br><br>
+Мощности электрического тока (P, Ватт) <br><br>
+<input name="login" type="text" size="35" maxlength="50" id="P" /> <br />
+ <td><br>   
+<button onclick="getResult()">Вычислить</button>
+</td>
+<div/>	
+</body>
+</html>
