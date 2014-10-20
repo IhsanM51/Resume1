@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+ 
+	<style>
+		.blue {
+			color = blue;
+		}
+	</style>
+ 
+  <meta charset="utf-8">
+  <title>Таблица</title>
+  <script type="text/javascript">
+
+	function show() {
+		
+		var table=document.getElementById('table');
+		for (var i=0; i<table.rows.length; i++) {
+		
+			for (var j=0; j<table.rows[0].cells.length; j++) {
+				var TD=table.rows[i].cells[j];
+				
+				
+				var sssr = TD.innerHTML;
+				
+				for (var q=0; q<sssr.length; q++) {
+					if (sssr[q] == 'м') {
+						for (var w=0; w<sssr.length; w++) {
+							if (sssr[w] == 'т') {
+								TD.style.backgroundColor = "green";	
+							}
+						}
+						
+					}
+				}
+							
+			}
+		}
+	}
+	</script>
+ </head>
+ <body>
+  <button id="main" onclick="show()">Найти</button></br></br>
+  <div id="pole">
+  <table name="table" id="table" border="1">
+   <tr><td>стильный</td><td>митрофорный</td><td>годы</td><td>кость</td></tr>
+   <tr><td>колесо</td><td>джомолунгма</td><td>шопито</td><td>логин</td></tr>
+   <tr><td>физрук</td><td>мир</td><td>месть</td><td>рынок</td></tr>
+   <tr><td>рука</td><td>погода</td><td>дым</td><td>митинг</td></tr>
+   <tr><td>митогенетический</td><td>земля</td><td>строить</td><td>мясо</td></tr>
+   <tr><td>зима</td><td>стол</td><td>лаваш</td><td>мир</td></tr>
+   <tr><td>пример</td><td>честный</td><td>корова</td><td>баржа</td></tr>
+   <tr><td>циркуль</td><td>осень</td><td>домой</td><td>клавиатура</td></tr>
+  </table>
+  </div>
+ </body>
+</html>
