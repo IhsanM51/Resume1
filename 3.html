@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>ы</title>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="1000" height="500"></canvas>
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+	  
+      context.save();
+
+context.beginPath();
+context.moveTo(100,130); // лево
+context.lineTo(100,370);
+context.moveTo(100,130); // лево верхний
+context.lineTo(130,100);
+context.moveTo(130,100); // право
+context.lineTo(370,100);
+context.moveTo(370,100); // право верхний
+context.lineTo(400,130);
+context.moveTo(400,130); // верх
+context.lineTo(400,370);
+context.moveTo(400,370); // право нижний
+context.lineTo(370,400);
+context.moveTo(130,400); // них
+context.lineTo(370,400);
+context.moveTo(100,370); // левый нижний
+context.lineTo(130,400);
+
+context.moveTo(180,40); // верх верх
+context.lineTo(420,40);
+context.moveTo(130,100); // лево верхний верхний
+context.lineTo(180,40);
+context.moveTo(450,70); // право право
+context.lineTo(450,320);
+context.moveTo(420,40); // право верхний верхний
+context.lineTo(450,70);
+context.moveTo(370,100); // право верхний верхний верхний
+context.lineTo(420,40);
+context.moveTo(400,130); // право верхний верхний верхний
+context.lineTo(450,70);
+context.moveTo(400,370); // право нижний нижний
+context.lineTo(450,320);
+context.strokeStyle = "red";
+context.stroke();
+
+context.beginPath(); // лево верх
+context.strokeStyle = 'yellow';  
+context.lineWidth = 1;
+context.arc(150, 150, 20, 0, 2 * Math.PI, false);
+context.closePath();
+context.fillStyle = 'yellow';
+context.fill();
+context.stroke();
+
+context.beginPath(); // право верх
+context.strokeStyle = 'yellow';  
+context.lineWidth = 1;
+context.arc(350, 150, 20, 0, 2 * Math.PI, false);
+context.closePath();
+context.fillStyle = 'yellow';
+context.fill();
+context.stroke();
+
+context.beginPath(); // лево низ
+context.strokeStyle = 'yellow';  
+context.lineWidth = 1;
+context.arc(150, 350, 20, 0, 2 * Math.PI, false);
+context.closePath();
+context.fillStyle = 'yellow';
+context.fill();
+context.stroke();
+
+context.beginPath(); // право низ
+context.strokeStyle = 'yellow';  
+context.lineWidth = 1;
+context.arc(350, 350, 20, 0, 2 * Math.PI, false);
+context.closePath();
+context.fillStyle = 'yellow';
+context.fill();
+context.stroke();
+
+context.beginPath(); // центр
+context.strokeStyle = 'yellow';  
+context.lineWidth = 1;
+context.arc(250, 250, 20, 0, 2 * Math.PI, false);
+context.closePath();
+context.fillStyle = 'yellow';
+context.fill();
+context.stroke();
+
+context.beginPath();
+context.strokeStyle = "yellow";
+context.lineWidth = 1;
+for (var i = 0 * Math.PI; i < 2 * Math.PI; i += 0.01 ) {
+xPos = 190 - (15 * Math.sin(i)) * Math.sin(0 * Math.PI) + (20 * Math.cos(i)) * Math.cos(0 * Math.PI);
+yPos = 70 + (20 * Math.cos(i)) * Math.sin(0 * Math.PI) + (15 * Math.sin(i)) * Math.cos(0 * Math.PI);
+if (i == 0) {
+        context.moveTo(xPos, yPos);
+    } else {
+        context.lineTo(xPos, yPos);
+    }
+}
+context.fillStyle = "yellow";
+context.fill();
+context.closePath();
+context.stroke();
+
+context.beginPath();
+context.strokeStyle = "yellow";
+context.lineWidth = 1;
+for (var i = 0 * Math.PI; i < 2 * Math.PI; i += 0.01 ) {
+xPos = 350 - (15 * Math.sin(i)) * Math.sin(0 * Math.PI) + (20 * Math.cos(i)) * Math.cos(0 * Math.PI);
+yPos = 70 + (20 * Math.cos(i)) * Math.sin(0 * Math.PI) + (15 * Math.sin(i)) * Math.cos(0 * Math.PI);
+if (i == 0) {
+        context.moveTo(xPos, yPos);
+    } else {
+        context.lineTo(xPos, yPos);
+    }
+}
+context.fillStyle = "yellow";
+context.fill();
+context.closePath();
+context.stroke();
+
+context.beginPath();
+context.strokeStyle = "yellow";
+context.lineWidth = 1;
+for (var i = 0 * Math.PI; i < 2 * Math.PI; i += 0.01 ) {
+xPos = 425 - (20 * Math.sin(i)) * Math.sin(0 * Math.PI) + (15 * Math.cos(i)) * Math.cos(0 * Math.PI);
+yPos = 220 + (15 * Math.cos(i)) * Math.sin(0 * Math.PI) + (20 * Math.sin(i)) * Math.cos(0 * Math.PI);
+if (i == 0) {
+        context.moveTo(xPos, yPos);
+    } else {
+        context.lineTo(xPos, yPos);
+    }
+}
+context.fillStyle = "yellow";
+context.fill();
+context.closePath();
+context.stroke();
+
+    </script>
+  </body>
+</html>
